@@ -14,7 +14,7 @@ app.get('/new/*', function (req,res) {
 		db.url.create({
 			url: urlstr
 		}).then(function (url) {
-			var short = 'https://little-url.herokuapp.com/' + url.id;
+			var short = 'https://url-shortener-orabi.herokuapp.com/' + url.id;
 			res.json({ "original_url": urlstr, "short_url": short });
 		}, function (e) {
 			res.send('something went wrong!');
